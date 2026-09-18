@@ -20,6 +20,7 @@ connectToDatabase().then(() => {
 
 
 app.use(express.json());
+app.use(express.static('public'));
 
 // Route files
 
