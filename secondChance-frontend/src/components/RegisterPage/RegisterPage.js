@@ -35,12 +35,12 @@ function RegisterPage() {
 
         // console.log('ers',json.errors);
 
-        if (json.authtoken) {
-            sessionStorage.setItem('auth-token', json.authtoken);
+        if (json.token) {
+            sessionStorage.setItem('auth-token', json.token);
             sessionStorage.setItem('name', firstName);
             sessionStorage.setItem('email', json.email);
-            navigate('/app');
             setIsLoggedIn(true);
+            navigate('/app');
         }
         if (json.error) {
             setShowerr(json.error);
