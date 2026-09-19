@@ -11,7 +11,7 @@ router.get('/', async (req, res, next) => {
     const collection = db.collection('secondChanceItems')
 
     // Initialize the query object
-    let query = {}
+    const query = {}
 
     if (req.query.name && req.query.name.trim() !== '') {
       query.name = { $regex: req.query.name, $options: 'i' }
